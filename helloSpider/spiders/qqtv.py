@@ -34,13 +34,13 @@ class QqtvSpider(CrawlSpider):
         # leftdown_content > div:nth-child(1) > div.mod_bd > ul > li.mod_summary.intro_item > div.video_summary.open > p
 
 
-        title = response.css('h1::text').extract()[0].strip()
-        director = response.css('.pricelabel > strong::text').extract()[0]
-        summary = response.css('.pricelabel > strong::text').extract()[0]
+        title = response.css('div.mod_intro > div.video_base._base > h1 > a::attr(title)').extract()[0]
+        director = response.css('.mod_summary > .director a').extract()[0].strip()
+        summary = response.css('.video_summary > .summary').extract()[0]
 
         item = HellospiderItem()
         item['title'] = title
-        item['price'] = director
+        item['director'] = director
         item['summary'] = summary
         item['url'] = response.url
         yield item
