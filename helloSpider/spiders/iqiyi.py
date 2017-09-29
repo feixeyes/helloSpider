@@ -23,7 +23,7 @@ class IqiyiSpider(CrawlSpider):
     def parse_qiyidetail_page(self, response):
         # print('Processing detail..' + response.url)
         try:
-            title = response.css(".mod-play-tit > span").extract()[0]
+            title = response.css(".mod-play-tit > span::text").extract()[0]
             director = response.css(".progInfo_rtp > .type-con > a::attr(title)").extract()[0]
             summary = response.css(".progInfo_intr  > .type-con").extract()[0]
 
