@@ -28,8 +28,8 @@ class QqtvSpider(CrawlSpider):
         # print('Processing detail..' + response.url)
         try:
             title = response.css('div.mod_intro > div.video_base._base > h1 > a::attr(title)').extract()[0]
-            director = response.css('.mod_summary > .director a').extract()[0].strip()
-            summary = response.css('.video_summary > .summary').extract()[0]
+            director = response.css('.mod_summary > .director a::text').extract()[0].strip()
+            summary = response.css('.video_summary > .summary::text').extract()[0]
 
             item = HellospiderItem()
             item['title'] = title
