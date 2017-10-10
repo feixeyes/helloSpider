@@ -16,6 +16,7 @@ class QiyiwholeSpider(CrawlSpider):
 
     def parse_item(self, response):
         # print('Processing..' + response.url)
+
         try:
             if len(response.css(".mod-play-tit > span").extract())!=0:
                 print('saving data'+response.url)
