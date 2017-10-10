@@ -4,6 +4,7 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
+import time
 
 from pymongo import MongoClient
 
@@ -33,4 +34,5 @@ class HellospiderPipeline(object):
             self.collection.insert_one(dict(item))
             log.msg("Question added to MongoDB database!",
                     level=log.DEBUG, spider=spider)
+
         return item
