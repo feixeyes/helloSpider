@@ -10,29 +10,30 @@ from helloSpider.items import HellospiderItem, VideoItem
 class QqwholeSpider(CrawlSpider):
     name = 'qqwhole'
     allowed_domains = ['v.qq.com' ]
-    start_urls = [#'http://v.qq.com/x/list/tv'#电视剧
-                  'http://v.qq.com/x/list/movie'#电影
-                  # 'http://v.qq.com/x/list/variety',#综艺
-                  # 'http://v.qq.com/x/list/cartoon',#动漫
-                  # 'http://v.qq.com/x/list/children',#少儿
-                  # 'http://v.qq.com/x/list/doco',#纪录片
-                  # 'http://v.qq.com/x/list/news',#新闻 短视频
-                  # 'http://v.qq.com/x/list/ent',#娱乐 短视频
-                  # 'http://v.qq.com/x/list/music',#音乐 短视频
-                  # 'http://v.qq.com/x/list/sports',#体育 短视频
-                  # 'http://v.qq.com/x/list/games',#游戏 短视频
-                  # 'http://v.qq.com/x/list/fun',#搞笑 短视频
-                  # 'http://v.qq.com/x/list/kings',#王者荣耀 短视频
-                  # 'http://v.qq.com/x/list/dv',#微电影
-                  # 'http://v.qq.com/x/list/dv',#微电影
-                  # 'http://v.qq.com/x/list/fashion',#时尚
-                  # 'http://v.qq.com/x/list/life',#生活
-                  # 'http://v.qq.com/x/list/baby',#母婴 短视频
-                  # 'http://v.qq.com/x/list/education',#教育
-                  # 'http://v.qq.com/x/list/finance',#财经 短视频
-                  # 'http://v.qq.com/x/list/house',#房产 短视频
-                  # 'http://v.qq.com/x/list/house'#旅游 短视频
-                    ]
+    start_urls = ['http://v.qq.com/x/list/tv',#电视机
+                  'http://v.qq.com/x/list/movie',#电影
+                  'http://v.qq.com/x/list/variety',#综艺
+                  'http://v.qq.com/x/list/cartoon',#动漫
+                  'http://v.qq.com/x/list/children',#少儿
+                  'http://v.qq.com/x/list/music',#音乐 短视频
+                  'http://v.qq.com/x/list/doco',#纪录片
+                  'http://v.qq.com/x/list/news',#新闻 短视频
+                  'http://v.qq.com/x/list/ent',#娱乐 短视频
+                  'http://v.qq.com/x/list/sports',#体育 短视频
+                  'http://v.qq.com/x/list/games',#游戏 短视频
+                  'http://v.qq.com/x/list/fun',#搞笑 短视频
+                  'http://v.qq.com/x/list/kings',#王者荣耀 短视频
+                  'http://v.qq.com/x/list/dv',#微电影
+                  'http://v.qq.com/x/list/fashion',#时尚
+                  'http://v.qq.com/x/list/life',#生活
+                  'http://v.qq.com/x/list/baby',#母婴 短视频
+                  'http://v.qq.com/x/list/auto',#汽车 短视频
+                  'http://v.qq.com/x/list/tech',#科技 短视频
+                  'http://v.qq.com/x/list/education',#教育
+                  'http://v.qq.com/x/list/finance',#财经 短视频
+                  'http://v.qq.com/x/list/house',#房产 短视频
+                  'http://v.qq.com/x/list/travel'#旅游 短视频
+                ]
 
     rules = (
         Rule(LinkExtractor(allow=(), restrict_css=('.page_next',)),
