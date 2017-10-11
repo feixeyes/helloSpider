@@ -9,11 +9,12 @@ import time
 
 class HellospiderPipeline(object):
     def process_item(self, item, spider):
-        now = time.strftime('%Y-%m-%d', time.localtime())
-        fileName = 'film' + now + '.txt'
-        with open(fileName, 'a') as fp:
-            fp.write(item['title'].encode('utf8') + '\t')
-            fp.write(item['director'].encode('utf8') + '\t')
-            fp.write(item['summary'].encode('utf8') + '\t')
-            fp.write(item['url'] + '\n\n')
+        # now = time.strftime('%Y-%m-%d', time.localtime())
+        # fileName = 'film' + now + '.txt'
+        # with open(fileName, 'a') as fp:
+        #     fp.write(item['title'].encode('utf8') + '\t')
+        #     fp.write(item['director'].encode('utf8') + '\t')
+        #     fp.write(item['summary'].encode('utf8') + '\t')
+        #     fp.write(item['url'] + '\n\n')
         return item
+
