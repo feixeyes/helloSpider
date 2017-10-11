@@ -9,7 +9,30 @@ from helloSpider.items import HellospiderItem
 class QqtvSpider(CrawlSpider):
     name = 'qqtv'
     allowed_domains = ['v.qq.com' ]
-    start_urls = ['http://v.qq.com/x/list/tv']
+    start_urls = ['http://v.qq.com/x/list/movie'#,
+                  # 'http://v.qq.com/x/list/tv',
+                  # 'http://v.qq.com/x/list/variety',
+                  # 'http://v.qq.com/x/list/cartoon',
+                  # 'http://v.qq.com/x/list/children',
+                  # 'http://v.qq.com/x/list/music',
+                  # 'http://v.qq.com/x/list/doco',
+                  # 'http://v.qq.com/x/list/news',
+                  # 'http://v.qq.com/x/list/ent',
+                  # 'http://v.qq.com/x/list/sports',
+                  # 'http://v.qq.com/x/list/games',
+                  # 'http://v.qq.com/x/list/fun',
+                  # 'http://v.qq.com/x/list/kings',
+                  # 'http://v.qq.com/x/list/dv',
+                  # 'http://v.qq.com/x/list/fashion',
+                  # 'http://v.qq.com/x/list/life',
+                  # 'http://v.qq.com/x/list/baby',
+                  # 'http://v.qq.com/x/list/auto',
+                  # 'http://v.qq.com/x/list/tech',
+                  # 'http://v.qq.com/x/list/education',
+                  # 'http://v.qq.com/x/list/finance',
+                  # 'http://v.qq.com/x/list/house',
+                  # 'http://v.qq.com/x/list/travel'
+                  ]
 
     rules = (
         Rule(LinkExtractor(allow=(), restrict_css=('.page_next',)),
